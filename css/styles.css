@@ -1,0 +1,103 @@
+/* Universal Selector ( * ) */
+* {
+    color: red;
+    font-size: 28px;
+}
+
+/*Pseudo-classes Selector*/
+a:hover {
+    background-color: yellow;
+}
+
+/*Tag Selector*/
+p {
+    color: blue;
+}
+
+/*Class Selector*/
+.highlight {
+    color: green;
+}
+
+/*ID Selector*/
+#header {
+    background-color: yellow;
+}
+
+/*Descendant Selector*/
+article p {
+    color: deeppink;
+}
+
+/*Child Selector ( parent > child )
+ Matches an element that is a
+ direct child of a specific element*/
+ul > li {
+    list-style-type: square;
+}
+
+/*General Siblings Selector*/
+h2 ~ p {
+    background-color: peachpuff;
+}
+
+/*Sibling Selector ( element1 +  element2)
+it will select the
+element which will
+follows another specif element
+immediately after it.
+*/
+h2 + p {
+    background-color: aqua;
+}
+
+/*Attribute Selector*/
+input[type="text"] {
+    color: black;
+    font-size: 18px;
+    border-color: palegreen;
+}
+
+input[type="submit"] {
+    border-radius: 8px;
+    font-size: 18px;
+    color: black;
+    padding: 8px;
+    text-transform: uppercase;
+}
+
+/*Pseudo-class*/
+ul li:first-child {
+    background-color: blueviolet;
+}
+
+ul li:last-child {
+    background-color: darkolivegreen;
+}
+
+ul li:nth-child(2) {
+    background-color: yellow;
+}
+
+/*Pseudo-elements ::before and ::after*/
+
+p::before {
+    content: "🌶️";
+    font-size: 24px;
+}
+
+p::after {
+    content: "🍻";
+}
+
+/*Grouping Selector*/
+
+h1, p {
+    font-family: Monaco, serif;
+}
+
+/*Combining Selector*/
+p.dummy::first-letter {
+    font-size: 76px;
+    initial-letter: 4 6;
+}
