@@ -1,0 +1,88 @@
+body {
+    font-family: Monaco, serif;
+}
+
+nav {
+    display: none;
+}
+
+#menu-checkbox:checked ~ nav {
+    display: block;
+}
+
+/*The ~ is known as the general sibling
+ combinator in CSS. It selects an element
+  that is a sibling of another element.*/
+
+/*"When the element with the ID menu-checkbox
+is in the :checked state, select any nav
+element that is a follow ing sibling of
+that checkbox and apply the style display: block; to it."*/
+
+#menu-checkbox {
+    display: none;
+}
+
+nav a {
+    display: block;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    background-color: olivedrab;
+    border-radius: 8px;
+}
+
+nav a {
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 16px;
+    margin: 0;
+}
+
+/*!*LEARNING MEDIA QUERIES*!
+WE USE THEM WHEN WE WANT TO
+ CHANGE THE CSS ON DIFFERNET SCREEN SIZES*/
+/* Small (sm) */
+@media (min-width: 640px) {
+    /* Your styles for the small breakpoint here */
+    nav {
+        display: block;
+        position: static;
+    }
+
+    header label {
+        display: none;
+    }
+
+    nav li {
+        display: inline-block;
+    }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+    /* Your styles for the medium breakpoint here */
+}
+
+/* Large (lg) */
+@media (min-width: 1024px) {
+    /* Your styles for the large breakpoint here */
+}
+
+/* Extra Large (xl) */
+@media (min-width: 1280px) {
+    /* Your styles for the extra large breakpoint here */
+}
+
+/* 2XL (2xl) */
+@media (min-width: 1536px) {
+    /* Your styles for the 2XL breakpoint here */
+}
