@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Specificity :: </title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <style>
+        /*ONE ****************/
+        /*0, 1, 0, 0*/
+        #header-id {
+            color: blue;
+        }
+
+        /*0, 0, 1, 0*/
+        .header {
+            color: green;
+        }
+
+        /*0, 0, 0, 1*/
+        h2 {
+            color: red;
+            /*color: red !important;*/
+        }
+
+        /*TWO ****************/
+
+        /*0, 0, 1, 1*/
+        h2.header {
+            color: red;
+            /*color: red !important;*/
+        }
+        /*The fourth category here is the !important which overwrite everything*/
+
+        /*THREE ****************/
+        /*Now this is more specific it has one for the tag and one for the class*/
+
+
+        /*0, 1, 100000, 2*/
+        h2.header.green {
+            color: red;
+        }
+
+        /*One single id will overwrite million classes*/
+
+        /*Show Specificity calculator*/
+
+        /*The more more specific is the inline styles it is more specific than the id, class or tag selector*/
+        /*The only thing which overwrite inline style to use important*/
+
+        /*Don't use important very bad idea*/
+        /*0, 0, 1, 2*/
+        h2.header span {
+            color: purple;
+        }
+
+        /*0, 1, 0, 1*/
+        #header-id span {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<!--Speak about that CSS start from the top to the bottom-->
+
+<!--Speak about the Specificity-->
+<h2 id="header-id" class="header">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+    incididunt ut la</h2>
+
+<!--TODO ASK which one will work-->
+<!--<h2 id="header-id" class="header">-->
+<!--    <span>-->
+<!--        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor-->
+<!--    incididunt ut la-->
+<!--    </span>-->
+<!--</h2>-->
+<p id="paragraph-id" class="paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuLorem ipsum
+    dolor sit amet, consectetur adipiscing elit, sed do eiu</p>
+
+</body>
+</html>

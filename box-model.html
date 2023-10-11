@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Box Model :: </title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+
+    <!--    Use the earth levels-->
+    <style>
+        /*The Box Model describe how element is layout*/
+        /*on the page and how they relate to one another*/
+
+        /*the px is a measuring unit we use it to measure things in computer screens*/
+        .div-1 {
+            background-color: purple;
+            width: 100px;
+            height: 100px;
+            padding: 24px;
+            /*It define how much space is around our element, it is the nearest to our content*/
+            /*the background is contained with the padding*/
+            /*It expand the size of our container with 24px*/
+            margin: 16px;
+            /*Same a bit like padding but it space our element from the other elements*/
+            /*The margin is the content out side our border*/
+            border: 10px solid red;
+            /*It is the border around our element*/
+
+            /*Explain the box sizing issue*/
+            /*to fix the issue we use something called*/
+            /*box-sizing and how it works,when we do that we make all the box of the width and height we put*/
+            /*It scale the content to the width and height is*/
+
+            /*box-sizing: border-box;*/
+
+            /*now the 100px will be everything including the padding the width and the border*/
+
+            /*it's always a very good practice to always set your general selector with a borderbox*/
+        }
+
+        /** {*/
+        /*    box-sizing: border-box;*/
+        /*}*/
+
+        /*!*Explain that the margin is dominant*! if one has 16px and the two has 20 then 20px will be the spacing between them*/
+
+        .div-2 {
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+
+        /*Explain the padding*/
+        /*border-width: 10px 10px 2px 20px*/
+        /*we can't do this on the border selector*/
+    </style>
+</head>
+<body>
+<div class="div-1">One</div>
+<div class="div-2">Two</div>
+</body>
+</html>

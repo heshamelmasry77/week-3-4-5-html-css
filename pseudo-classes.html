@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Pseudo :: </title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <style>
+        button:hover {
+            background-color: red;
+        }
+
+        /*Focused is when i click on it*/
+        /*Same also if i clicked TAB*/
+        button:focus {
+            background-color: blue;
+        }
+
+        #name:disabled {
+            background-color: purple;
+        }
+
+        #email:required {
+            background-color: blue;
+        }
+
+        li:nth-child(even) {
+            /*This will get us each child with is even*/
+            color: blue;
+        }
+
+        li:nth-child(2n) {
+            /*i want to select every second child*/
+            color: purple;
+        }
+
+        /*If i want to skip the first one this is called formula*/
+        li:nth-child(2n + 1) {
+            color: red;
+        }
+
+        /*the n is usually starts at 0*/
+    </style>
+</head>
+<body>
+<div>
+    <label for="email">Email:</label>
+    <input type="text" id="email" required/>
+</div>
+<div>
+    <label for="name"></label>
+    <input type="text" id="name" disabled/>
+</div>
+<button type="submit" class="submit">
+    Click Me to Send
+</button>
+
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+
+</body>
+</html>
