@@ -3,10 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>:: Home :: </title>
-    <link href="css/styles.css" rel="stylesheet" type="text/css"/>
+    <title>Responsive Menu</title>
+    <script src="https://kit.fontawesome.com/c975fe8721.js" crossorigin="anonymous"></script>
+    <style>
+
+        * {
+            box-sizing: border-box;
+            font-family: Monaco, serif;
+        }
+
+        body {
+            margin: 0;
+            position: relative;
+        }
+
+        header {
+            background: black;
+            position: sticky;
+            top: 0;
+            padding: 8px 16px;
+            color: white;
+        }
+
+        nav {
+            display: none;
+            background: black;
+            position: absolute;
+            top: 65px;
+            width: 100%;
+            left: 0;
+            padding-left: 16px;
+            height: 100vh;
+        }
+
+        nav ul {
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            padding: 16px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: capitalize;
+        }
+
+        label {
+            font-size: 38px;
+        }
+
+        #menu-checkbox:checked ~ nav {
+            display: block;
+        }
+
+        #menu-checkbox {
+            display: none;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        /* Small (sm) */
+        @media (min-width: 640px) {
+        }
+
+        /* Medium (md) */
+        @media (min-width: 768px) {
+            header {
+                padding: 0 8px;
+            }
+
+            /* Your styles for the medium breakpoint here */
+            nav {
+                display: block;
+                position: static;
+                top: initial;
+                width: initial;
+                left: initial;
+                padding-left: 8px;
+                height: auto;
+            }
+
+            header label {
+                display: none;
+            }
+
+            nav li {
+                display: inline-block;
+            }
+
+            nav li a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        /* Large (lg) */
+        @media (min-width: 1024px) {
+            /* Your styles for the large breakpoint here */
+        }
+
+        /* Extra Large (xl) */
+        @media (min-width: 1280px) {
+            /* Your styles for the extra large breakpoint here */
+        }
+
+        /* 2XL (2xl) */
+        @media (min-width: 1536px) {
+            /* Your styles for the 2XL breakpoint here */
+        }
+
+    </style>
 </head>
 <body>
+
+<header>
+    <input type="checkbox" id="menu-checkbox"/>
+    <label for="menu-checkbox">
+        <i class="fa-solid fa-bars"></i>
+    </label>
+
+    <nav>
+        <ul>
+            <li>
+                <a href="#">home</a>
+            </li>
+            <li>
+                <a href="#">about</a>
+            </li>
+            <li>
+                <a href="#">contact</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <h1>Hesh is a Minions</h1>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+    <p>
+        Minions ipsum gelatooo uuuhhh para tú bappleees para tú tank yuuu! Gelatooo po kass. Bappleees poopayee
+        tulaliloo pepete belloo! Wiiiii. Baboiii hana dul sae bappleees pepete hana dul sae po kass po kass baboiii.
+        Belloo! hahaha baboiii poopayee hahaha belloo! La bodaaa bee do bee do bee do chasy. Pepete poopayee tank yuuu!
+        Butt la bodaaa wiiiii aaaaaah ti aamoo! Poulet tikka masala. Tatata bala tu daa ti aamoo! Poulet tikka masala
+        poopayee wiiiii bappleees hana dul sae ti aamoo! Jeje belloo!
+    </p>
+</main>
 
 </body>
 </html>
