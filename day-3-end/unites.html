@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Units :: </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /*<!--ONE-->*/
+        /*<!--THE WAY PIXELS WORK IS*/
+        /*    THAT EACH PIXEL IS A PART OF YOUR SCREEN-->*/
+
+        /*<!--THE 200PX FOR EXAMPLE WILL BE*/
+        /*           DIFFERENT ON EACH SCREEN OF IT-->*/
+
+        .parent {
+            width: 200px;
+            border: 1px solid black;
+        }
+
+        .item {
+            background-color: green;
+            /*height: 20px;*/
+            margin: 8px 0;
+        }
+
+        /*TWO*/
+        .item-percent {
+            width: 50%;
+        }
+
+        /*THE WAY PERCENT WORKS IS THAT IT TAKES THE*/
+        /*WIDTH OF IT'S PARENT*/
+
+        /*THREE , THE vw and the vh unites*/
+        /*The are a bit similar to percentages*/
+
+        /*THE view width don't care about the parent , it takes the*/
+        /*size of the screen*/
+        .item-view-width {
+            width: 50vw;
+            height: 25vh;
+            /*this takes the 25% of our page*/
+        }
+
+        /*You will notice that it takes more */
+        /*spacing because it doesn't care about the*/
+        /*parent it cares about the screen*/
+        /*50 vw Means 50% of the screen*/
+        /*100 means 100% of the screen*/
+
+        /*so the view width and view height are units*/
+        /*based on the width and height of the screen*/
+
+        /*but the percentage is based on the width of the container*/
+
+        /*FOUR*/
+        /*THE rem and the em*/
+
+        /*Root font size*/
+        /*1 rem means 100% of the font we are using in the root*/
+        /*for example if we are using base of 16px then it will be 16px*/
+        /*if it is 2rem then it will be 32px*/
+
+        /*TODO REMOVE THE HEIGHT*/
+        .rem {
+            font-size: 1rem;
+            /*100%*/
+
+            /*font-size: 2rem;*/
+            /*200%*/
+        }
+        /*em it is based upon the parent font size*/
+        /*so if i have the parent is 40 px , it will be 40 px if it is 1em*/
+        .some-parent {
+            font-size: 40px;
+        }
+        .em {
+            font-size: 2em;
+        }
+
+
+        /*Why we use rem ??*/
+
+        /*because if someone changed their screen size px won't scale*/
+
+        /*but the rem will scale and it will make the font size looks nice*/
+
+        /*It will scale magically*/
+    </style>
+</head>
+
+
+<body>
+
+<div class="item rem">rem</div>
+<div class="item em">em</div>
+
+<div class="some-parent">
+    <div class="item rem">rem</div>
+    <div class="item rem">em</div>
+</div>
+
+
+<div class="parent">
+    <div class="item">one</div>
+    <div class="item">two</div>
+
+    <!--    SHOW THIS AFTER I SHOW THE OUTSIDE DIV-->
+    <!--    <div class="item item-percent">Percent</div>-->
+</div>
+
+<div class="item item-percent">Percent</div>
+
+<div class="item item-view-width">50 view width</div>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Document flow :: </title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .div-1 {
+            background-color: red;
+
+            /*TWO*/
+            height: 200px;
+            width: 200px;
+        }
+
+        .span-1 {
+            background-color: green;
+        }
+
+        .span-2 {
+            background-color: blue;
+        }
+
+        .div-2 {
+            background-color: yellow;
+        }
+
+        button {
+            width: 150px;
+        }
+    </style>
+</head>
+<!--WE WILL TALK ABOUT POSITION AND LAYOUT AND WE WILL TAlk ABOUT-->
+<!--POSITION OF ELEMENTS ON YOUR PAGE-->
+
+
+<!--ONE -->
+
+<!--we  want to understand how are these elements are layout on this screen-->
+
+<!--Notice the div elements, they take the entire page-->
+<!--the span elements takes the width and the height of the content inside them-->
+
+<!--and this is because of the different display properties i have by default on them-->
+<!--Now let's check the inspection-->
+
+<!--Display block is basically saying that it will take the entire width of the parent container-->
+<!--for example here the body of the container which is the body-->
+
+<!--The div takes the height of its content.-->
+
+
+
+<!--THREE-->
+<!--span , if you check it on the inspect dev tool you will notice also it is display inline-->
+
+<!--it takes up as much width as the content inside it and it doesn't take the full width of the parent-->
+<!--like how the block do -->
+
+<!--the display inline we can't change the width-->
+<!--same thing with the height-->
+
+<!--it only takes enough width and height to fit the content and nothing more-->
+
+<!--if you want it to take width and height you will need to use display inline-block-->
+
+
+<!--FOUR the Buttons also are inline-block-->
+
+
+
+<!--FIVE-->
+
+<!--display none -->
+
+<!--when you use it on an element it will pretend that the element doesn't exist-->
+<!--it will be like if you come to your html and you deleted your element-->
+
+<!--What we said is the normal document flow-->
+<body>
+
+<div class="div-1">I am Div</div>
+<span class="span-1">I am Span</span>
+<button class="btn-1">I am Button</button>
+<span class="span-2">I am another Span</span>
+<div class="div-2">I am another Div</div>
+
+</body>
+</html>
