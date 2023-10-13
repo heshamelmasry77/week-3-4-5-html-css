@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Modal ::</title>
+    <script src="https://kit.fontawesome.com/c975fe8721.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Josefin Sans', sans-serif;
+        }
+
+        body {
+            background-color: #555;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .modal {
+            height: 80vh;
+            background-color: white;
+            width: 900px;
+            max-width: 80%;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 1rem .5rem 1rem;
+            border-bottom: 1px solid #777;
+        }
+
+        .modal-header .title {
+            font-size: 1.5rem;
+            padding-top: 1rem;
+        }
+
+        .modal-header .close-button {
+            border: none;
+            background: none;
+            font-size: 1.5rem;
+            align-self: flex-start;
+            padding-top: .5rem;
+            cursor: pointer;
+        }
+
+        .modal-body {
+            padding: 1rem;
+            overflow: auto;
+            flex-grow: 1;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            border-top: 1px solid #777;
+            padding: .5rem;
+            gap: .5rem;
+        }
+
+        .modal-footer .btn {
+            /*margin-right: .5rem;*/
+        }
+
+        .btn {
+            padding: .5rem 1rem;
+            border: none;
+            cursor: pointer;
+            color: white;
+            border-radius: .5rem;
+            font-weight: bold;
+            font-size: inherit;
+        }
+
+        .btn-primary {
+            background-color: #1CA;
+        }
+
+        .btn-primary:hover, .btn-primary:focus {
+            background-color: #0A8;
+        }
+
+        .btn-danger {
+            background-color: #C33;
+        }
+
+        .btn-danger:hover, .btn-danger:focus {
+            background-color: #A11;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--MODAL CONTAINER-->
+<div class="modal">
+
+    <!--MODAL HEADER-->
+    <div class="modal-header">
+        <span class="title">Title</span>
+        <button class="close-button">
+            <i class="fa-regular fa-rectangle-xmark"></i>
+        </button>
+    </div>
+
+    <!--MODAL BODY-->
+    <div class="modal-body">
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+        Minions ipsum esse tank yuuu! Me want bananaaa! Chasy officia wiiiii ut aliquip. Gelatooo consectetur tulaliloo
+    </div>
+
+    <!--MODAL FOOTER-->
+    <div class="modal-footer">
+        <button class="btn btn-primary">Ok</button>
+        <button class="btn btn-danger">Cancel</button>
+    </div>
+
+</div>
+</body>
+</html>

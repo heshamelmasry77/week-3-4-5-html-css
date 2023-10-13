@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Button Library :: </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: Monaco, serif;
+        }
+
+        .btn {
+            background: lightgray;
+            border: 1px solid lightgray;
+            outline: none;
+            cursor: pointer;
+            padding: .5em 1em;
+            border-radius: 8px;
+        }
+
+        .btn:hover, .btn:focus {
+            background-color: darkgray;
+            box-shadow: 0 0 5px 0 lightgray;
+        }
+
+        .btn.btn-primary {
+            background-color: purple;
+            color: white;
+            border-color: mediumpurple;
+        }
+
+        .btn.btn-primary:hover, .btn.btn-primary:focus {
+            background-color: rebeccapurple;
+            box-shadow: 0 0 5px 0 mediumpurple;
+        }
+
+        .btn.btn-accent {
+            background-color: blue;
+            color: white;
+            border-color: darkblue;
+        }
+
+        .btn.btn-accent:hover, .btn.btn-accent:focus {
+            background-color: darkblue;
+            box-shadow: 0 0 5px 0 dodgerblue;
+        }
+    </style>
+</head>
+
+
+<body>
+
+<button class="btn">Default</button>
+<button class="btn btn-primary">Primary</button>
+<button class="btn btn-accent">Accent</button>
+<button>Danger</button>
+<button>Large</button>
+<button>Small</button>
+<button>Pill</button>
+<button>Custom</button>
+
+</body>
+</html>
+
+
