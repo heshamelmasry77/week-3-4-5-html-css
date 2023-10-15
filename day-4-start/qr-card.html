@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>QR Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --cappuccino: #4b3832;
+            --background-color: #D5E1EF;
+        }
+
+        * {
+            box-sizing: border-box;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        body {
+            background-color: var(--background-color);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .qr-card {
+            border-radius: 20px;
+            background-color: white;
+            padding: 1rem;
+            padding-bottom: 0;
+            width: 320px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .header-body {
+            background-color: #2C7DFA;
+            width: 100%;
+            height: 288px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .qr-img {
+            z-index: 10;
+        }
+
+        .header-body .circle {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+
+        .header-body .circle svg {
+            display: block;
+        }
+
+        .header-body .circle, .header-body .circle svg {
+            border-bottom-right-radius: 10px;
+        }
+
+        .qr-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: 0 1rem 40px 1rem;
+        }
+
+        .qr-content-heading,
+        .qr-content-subheading {
+            text-align: center;
+        }
+
+        .qr-content-heading {
+            color: #1F314F;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: normal;
+        }
+
+        .qr-content-subheading {
+            color: #7D889E;
+            font-weight: normal;
+            font-size: 15px;
+            letter-spacing: 0.19px;
+            line-height: normal;
+        }
+
+        /* Small (sm) */
+        @media (min-width: 640px) {
+        }
+
+        /* Medium (md) */
+        @media (min-width: 768px) {
+            /* Your styles for the medium breakpoint here */
+        }
+
+        /* Large (lg) */
+        @media (min-width: 1024px) {
+            /* Your styles for the large breakpoint here */
+        }
+
+        /* Extra Large (xl) */
+        @media (min-width: 1280px) {
+            /* Your styles for the extra large breakpoint here */
+        }
+
+        /* 2XL (2xl) */
+        @media (min-width: 1536px) {
+            /* Your styles for the 2XL breakpoint here */
+        }
+    </style>
+</head>
+<body>
+
+<div class="qr-card">
+
+    <!--    QR HEADER-->
+    <div class="qr-header">
+        <div class="header-body">
+            <span class="qr-img">
+              <img src="assets/images/qr-code.svg" alt="qr code img"/>
+            </span>
+            <span class="circle">
+                <svg width="157" height="84" viewBox="0 0 157 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="135.5" cy="135.5" r="135" fill="#3685FF"/>
+                </svg>
+            </span>
+        </div>
+    </div>
+
+    <!--    QR BODY-->
+    <div class="qr-content">
+        <div class="qr-content-heading">
+            Improve your front-end skills by building projects
+        </div>
+        <div class="qr-content-subheading">
+            Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

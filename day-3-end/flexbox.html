@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Flexbox :: </title>
+    <style>
+        /*we are going to speak about a way to place our elements on the DOM*/
+        /*we will take about flexbox container*/
+        * {
+            box-sizing: border-box;
+        }
+
+        /*ONE*/
+        /*Explain what i have in the page*/
+
+
+        /*TWO*/
+        /*with display, inline-block and block we actually define how the element behave itself*/
+
+        /*but with flexbox we actually define how the children behave inside the container*/
+
+        /*THREE*/
+        .container {
+            display: flex;
+            /*when i do display flex box i am changing the entire children flow inside this container*/
+            /*Only the direct children */
+
+            /*when we do this our margins won't collapse*/
+            /*so no more dominant*/
+
+            /*they are side by side and this because the have a parent of flex box*/
+            /*flexbox is one dimensional. 1D so it is either left and right r top and bottom*/
+            background-color: lightgray;
+            border: 2px solid black;
+
+            /*We have two axis*/
+            /*first : from left to right and it is horizontal*/
+
+            /*second: the cross axis is from top to bottom vertical axis*/
+
+            /*if you want to layout your elements on the x axis*/
+
+            /*we use*/
+            justify-content: flex-end;
+            /*justify-content: center;*/
+
+            /*the default is flex-start, elements are in the beginning of the container*/
+
+            /*we can also use*/
+            /*justify-content: space-between;*/
+            /*it is going to put the extra space between our elements*/
+
+
+            /*justify-content: space-around;*/
+            /*IT put equal amount of space ont he left and right side of every element*/
+
+            /*to place in the cross axis or y axis*/
+
+            /*we use*/
+
+            align-items: stretch;
+            /*by default it is set to stretch*/
+            /*the element will grow to fill the entire space*/
+
+            /*if i change my height to be min-width-50 it will grow*/
+
+            /*align-items: center;*/
+            /*align-items: flex-start;*/
+            /*align-items: flex-end;*/
+            /*no space between or space-around in the align items*/
+
+
+            /*******************/
+            /*if you want to element to wrap we can use*/
+            flex-wrap: wrap;
+
+            align-content: space-between;
+            /*it adds spacing between our elements, it won't matter much to use, not usually working*/
+        }
+
+        .container-2 {
+            display: flex;
+            background-color: lightgray;
+            border: 2px solid black;
+            flex-direction: column;
+            height: 800px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container-3 {
+            display: flex;
+            background-color: lightgray;
+            border: 2px solid black;
+            /*you can also define the size of the elements*/
+            /*Let's say i want this three box to take all the left space from the right'*/
+
+            /*all what we need to do is to put flex-grow:1; for the three box*/
+
+            /*to avoid the element not to shrink or go smaller*/
+            /*we use*/
+            /*flex-shrink:0 on the elements*/
+        }
+
+        .item {
+            border: 1px solid red;
+            background-color: darkslateblue;
+            width: 75px;
+            color: yellow;
+            margin: 10px;
+        }
+
+        .item-1 {
+            /*height: 50px;*/
+            min-height: 50px;
+            flex-shrink: 0;
+            /*if you increase it will then shrink faster*/
+
+            /*flex: grow shrink bases;*/
+            flex: 1 0 0;
+            /*this is the short hand*/
+
+            /*i don't like it i prefer to set each my self'*/
+
+            align-self: end;
+
+            /*We can also do the order of the items*/
+            /*order:1;*/
+            /*order:2*/
+        }
+
+        .item-2 {
+            /*height: 100px;*/
+            min-height: 100px;
+            /*flex-grow: 2;*/
+
+            /*this doesn't take the twice as big that item 3 it takes double the extra space and remember also we have a width at the top so 75px + two times the extra'*/
+
+            /*if want to fix this we have to set the flex-basis:0 so the starting is 0 and not the width*/
+            /*flex-basis: 0;*/
+        }
+
+        .item-3 {
+            /*height: 150px;*/
+            min-height: 150px;
+
+            /*We start this at container 3*/
+            /*flex-grow: 1;*/
+            /*flex-basis: 0;*/
+        }
+    </style>
+</head>
+
+
+<body>
+<div class="container">
+    <div class="item item-1">1 one</div>
+    <div class="item item-2">2 two</div>
+    <div class="item item-3">3 three</div>
+</div>
+
+<div class="container-2">
+    <div class="item item-1">1 one</div>
+    <div class="item item-2">2 two</div>
+    <div class="item item-3">3 three</div>
+</div>
+
+<div class="container-3">
+    <div class="item item-1">1 one</div>
+    <div class="item item-2">2 two</div>
+    <div class="item item-3">3 three</div>
+</div>
+</body>
+</html>
+
+
+<!--Last thing to speak about is inline-flex-->
