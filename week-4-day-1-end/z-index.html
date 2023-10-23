@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Z-index ::</title>
+
+    <!--    IT ALLOW US TO POSITION ELEMENTS
+     ON THE Z AXIS-->
+    <!--    IT ALLOW THE ELEMENT TO BE
+    ABOVE OR BELOW ANOTHER ELEMENT-->
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 2rem;
+        }
+
+        body {
+            height: 200vh;
+        }
+
+        .parent {
+            padding: .25rem;
+            background-color: #00AA88;
+            position: relative;
+        }
+
+        .child1 {
+            background-color: #2C7DFA;
+            padding: .25rem;
+            position: sticky;
+            top: 10px;
+
+            /*LARGER NUMBERS IS ABOVE OTHER ELEMENTS*/
+            /*AND LOWER NUMBERS WI LL BE LOWER OTHER ELEMENTS*/
+            /*    z-index: 0;*/
+            /*the default is 0*/
+            /*z-index: -1;*/
+            z-index: 2023;
+            /*it has the largest z index*/
+
+            /*It is very useful when you want to place an element on top of another element*/
+            /*or behind another element*/
+        }
+
+        .child2 {
+            background-color: #4b3832;
+            padding: .25rem;
+
+        }
+
+        .child3 {
+            background-color: #AA1111;
+            padding: .25rem;
+
+        }
+
+        /*STACKING CONTEXT */
+        /*EVERYTHING INSIDE AN ELEMENT HAS ITS OWN Z INDEX*/
+
+        /*IF WE HAVE A PAPER AND WE PUT LOTS OF PAPERS ON IT */
+        /*THIS PAPER STILL IS THE BASE*/
+        /*ELEMENTS ARE STACKING ON EACH OTHERS*/
+
+        /*BASED ON THE PARENT*/
+        /*IF AN ELEMENT AS Z INDEX OF 10 AND THE CHILDS ARE 20 30style*/
+        /*AND WE BRING ANOTHER PARENT WHICH Z INDEX OF 20 THEN IT WILL BE ON TOP OF THE CHILDS AND THE PARENT 1*/
+
+        .parent2 {
+            margin-top: 20px;
+            background-color: #7D889E;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="parent">
+    Parent
+    <div class="child1">One</div>
+    <div class="child2">Two</div>
+    <div class="child3">Three</div>
+</div>
+
+
+<div class="parent2">
+    Parent
+    <div class="child1">One</div>
+    <div class="child2">Two</div>
+    <div class="child3">Three</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: position ::</title>
+
+    <!--    I will speak today about the position property-->
+
+    <!--    ONE-->
+    <!--    search the position on the dev tool and show that it is-->
+    <!--    static as default and static means in simple words:-->
+    <!--    follow the normal document flow act like normal -->
+
+    <!--    TWO-->
+    <!--    What if we want to break out of the document flow !-->
+
+    <!--    FIRST we have position of relative-->
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 2rem;
+        }
+
+        body {
+            height: 200vh;
+        }
+
+        .parent {
+            padding: .25rem;
+            background-color: #00AA88;
+        }
+
+        .child1 {
+            background-color: #2C7DFA;
+            padding: .25rem;
+            /*TWO*/
+            position: relative;
+            /*what it does that it keep the element in place*/
+            /*inside the document flow*/
+            /*We can set top,left,right,bottom properties*/
+
+            /*and this will set from it relative position*/
+
+            /*left: 20px;*/
+            /*it moved it self 20px from the left edge*/
+            /*top: 20px;*/
+            /*Now it is overlapping element two*/
+            /*We are only moving the element itself*/
+            /*not like margin-top for example*/
+        }
+
+        .child2 {
+            background-color: #4b3832;
+            padding: .25rem;
+
+            /*THREE*/
+            position: absolute;
+
+            /*What happen to the absolute that it
+             removes the element 100%*/
+            /*from the document flow*/
+            /*completely remove it*/
+            /*top: 0;*/
+            /*it will position itself different now*/
+            /*zero pixels away of the top of our page*/
+
+            /*absolutely of our container*/
+            /*bottom: 10px;*/
+
+            /*the parent here is
+            the document the html and the body*/
+
+            /*if we want to make it absolute to some container*/
+
+            /*for example the .parent
+             then we should put position relative to it*/
+
+            /*this is called position context*/
+
+            /*it will be based on the nearest position to it*/
+        }
+
+        .child3 {
+            background-color: #AA1111;
+            padding: .25rem;
+
+            /*FOUR*/
+
+            /*position: fixed;*/
+
+
+            /*it is a little bit similar to the absolute*/
+            /*position but if we have for example long screen
+             it will stay in its position in the screen*/
+
+            /*THE POSITION FIXED IS BASED ON THE SCREEN*/
+
+
+            /*POSITION STICKY*/
+            /*IT IS A COMBINE BETWEEN RELATIVE AND ABSOLUTE*/
+            position: sticky;
+            top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="parent">
+    Parent
+    <div class="child1">One</div>
+    <div class="child2">Two</div>
+    <div class="child3">Three</div>
+</div>
+
+</body>
+</html>
