@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>:: z-index :: </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 2rem;
+        }
+
+        body {
+            height: 200vh;
+        }
+
+        .parent {
+            background-color: darkorange;
+            padding: .25rem;
+            position: relative;
+            z-index: 5;
+        }
+
+        .child1 {
+            background-color: #AA1111;
+            padding: .25rem;
+            /*position: sticky;*/
+            /*top: 10px;*/
+            z-index: 50;
+            position: relative;
+        }
+
+        .child2 {
+            background-color: #00AA88;
+            padding: .25rem;
+            position: relative;
+            z-index: 40;
+            bottom: 30px;
+        }
+
+        .child3 {
+            background-color: #7D889E;
+            padding: .25rem;
+            position: relative;
+            z-index: 20;
+            bottom: 50px;
+        }
+
+        .parent2 {
+            background-color: darkmagenta;
+            margin-top: 28px;
+            position: relative;
+            z-index: 10;
+            bottom: 200px;
+        }
+
+    </style>
 </head>
 
 <body>
+<div class="parent">
+    Parent
+    <div class="child1">One</div>
+    <div class="child2">Two</div>
+    <div class="child3">Three</div>
+
+</div>
+
+<div class="parent2">
+    Parent 2
+    <div class="child1">One</div>
+    <div class="child2">Two</div>
+    <div class="child3">Three</div>
+
+</div>
 
 </body>
 </html>
