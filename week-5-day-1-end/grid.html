@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: grid :: </title>
+    <style>
+        /*GRID HELPS YOU TO CREATE TWO dimensional LAYOUTS*/
+
+        /*ONE*/
+        /*SAME LIKE FLEX YOU MAKE THE PARENT ELEMENT*/
+        /*DISPLAY GRID THEN IT'S CHILD WILL BEHAVE
+         ACCORDING TO WHAT YOU CHANGE IN THE PARENT
+         TO THE PARENT GRID*/
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #BADA55;
+        }
+
+        .item {
+            border: 1px solid gray;
+            background-color: darkorange;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .container {
+            /*height: 500px;*/
+            display: grid;
+            /*NOTHING WILL HAPPEN BECAUSE*/
+            /*GRID WORKS SAME LIKE BLOCK ELEMENT*/
+            /*ONE AFTER ANOTHER*/
+
+            /*TWO*/
+            /*IF YOU WANT TO DO CHANGES  IN YOUR GRID*/
+            /*THEN YOU NEED TO DEFINE HOW MANY
+             COLUMNS AND HOW MANY ROWS*/
+            /*grid-template-columns: FIRST SECOND AND MORE IF WE WANT;*/
+
+            /*grid-template-columns: 100px 50px;*/
+            /*grid-template-columns: 100px 150px 200px;*/
+
+            /*EIGHT*/
+            /*grid-template-columns: 1fr 2fr 1fr;*/
+            /*we can also repeat*/
+
+            /*Repeat 4 times 1fr*/
+            grid-template-columns: repeat(4, 1fr);
+            /*IT IS ALL JUST RATIO*/
+            grid-template-rows: minmax(50px, auto);
+
+
+            /*item3 now will wrap to the next row*/
+            /*because we have defined only two columns*/
+
+            /*THREE*/
+            /*grid-template-rows: 150px 70px;*/
+
+            /*we can also use the short hand*/
+            /*grid-template: rows /  columns;*/
+            /*grid-template: 120px 70px / 100px 150px;*/
+            /*I DONT PREFER THIS SHORT HAND*/
+
+            /*grid-auto-rows: auto;*/
+
+            /*BY DEFAULT IT IS AUTO , You see our grid is only 2 row , the auto will define if they will take
+            auto width or also we can set it*/
+            /*grid-auto-rows: 250px;*/
+
+            /*WE CAN ALSO DEFINE THE SIZES OF THE ROWS*/
+            /*grid-auto-rows: 250px 100px;*/
+
+            /*THE JOB OF IT IS TO DEFINE THE EXTRA ITEMS YOU DIDN'T */
+            /*DEFINE IN THE grid-template-rows'*/
+
+            /*same also we have the grid-auto-columns*/
+
+            /*FOUR*/
+            /*grid-auto-flow: row;*/
+            /*DETERMINES WHERE OUR NEW ELEMENTS WILL ADDED*/
+            /*IF WE DIDN'T DEFINE IN THE TEMPLATE'*/
+            /*grid-auto-flow: row;*/
+
+            /*FIVE*/
+            /*grid-template-areas:*/
+            /*"header header"*/
+            /*"header header header"*/
+            /*"sidebar content .";*/
+
+            /*IT ALLOW IS TO CREATE NAMED SECTIONS INSIDE OUR CONTAINER*/
+            /*the period will put a note that this will be anything at all*/
+
+
+            /*NINE*/
+            row-gap: 16px;
+            column-gap: 10px;
+            gap: 25px;
+
+            /*justify-items: end;*/
+            /*Horizontally*/
+
+            /*align-content: center;*/
+
+            /*align-items: end;*/
+            /*vertically*/
+
+        }
+
+        .item1 {
+            /*FIVE*/
+            /*grid-area: content;*/
+
+            /*SIX*/
+            /*grid-column-start: 1;*/
+            /*grid-column-end: 3;*/
+
+            /*the start and the end are from the lines*/
+
+            /*grid-column: start / end;*/
+            /*grid-column: 1 / 3;*/
+
+            /*if you want it to span all the way you do*/
+
+            /*grid-column: 1 / -1;*/
+
+            /*because we can count backward and forward*/
+            /*1 2 3 4*/
+            /*-4 -3 -2 -1*/
+
+            /*EIGHT go up after up up up line 40*/
+            /*IN FLEX WE USE FLEX-GROW AND FLEX-SHRINK*/
+
+            /*GRID ALSO GIVES US THE ABILITY TO DO SO*/
+
+            /*FRACTIONAL UNITS*/
+
+
+        }
+
+        .item2 {
+            /*FIVE*/
+            /*grid-area: header;*/
+            align-self: start;
+
+            grid-column: span 2;
+        }
+
+        .item3 {
+            /*FIVE*/
+            /*grid-area: sidebar;*/
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="item item1">1</div>
+    <div class="item item2">2</div>
+    <div class="item item3">3</div>
+    <div class="item item4">4</div>
+    <div class="item item5">5</div>
+    <div class="item item6">6</div>
+<!--    .item.item${$}*30      -->
+
+</div>
+
+</body>
+</html>

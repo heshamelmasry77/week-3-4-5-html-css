@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: grid Example :: </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-size: 1.5rem;
+        }
+
+        .container {
+            height: 400px;
+            display: grid;
+            background-color: #00AA88;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-template-areas:
+            "header header header"
+            "maincontent sidebar ."
+            ". adverts ."
+            "footer footer footer";
+
+            /*justify-items: stretch;*/
+            /*align-items: stretch;*/
+            /*gap: 25px;*/
+            /*    column-gap: 25px;*/
+            row-gap: 30px;
+
+        }
+
+        .item {
+            border: 1px solid gray;
+            background-color: #BADA55;
+        }
+
+        .item1 {
+            grid-area: header;
+            /*grid-column-start: 2;*/
+            /*grid-column-end: 3;*/
+            /*grid-column: span 2;*/
+        }
+
+        .item2 {
+            grid-area: sidebar;
+        }
+
+        .item3 {
+            grid-area: maincontent;
+        }
+
+        .item4 {
+            grid-area: adverts;
+        }
+
+        .item5 {
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <!--    .item.item${$}*30      -->
+    <div class="item item1">header</div>
+    <div class="item item2">side bar</div>
+    <div class="item item3">main content</div>
+    <div class="item item4">adverts</div>
+    <div class="item item5">footer</div>
+</div>
+
+</body>
+</html>
+
+ -------------------------
+|        Header         |
+ -------------------------
+|            | Sidebar  |
+|   Main     |----------|
+|  Content   | Adverts  |
+|            |          |
+ -------------------------
+|        Footer         |
+ -------------------------
+
+
+-------------------------
+|        Header         |
+-------------------------
+|      |                |
+|      |                |
+| Side |     Main       |
+| Bar  |    Content     |
+|      |                |
+|      |                |
+-------------------------
+|    Footer Content     |
+-------------------------

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Transition Example - BTN animation :: </title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .btn {
+            background-color: #BADA55;
+            margin: 1rem;
+            font-size: 2rem;
+            border: none;
+            outline: none;
+            padding: .5rem 1rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+
+        .btn-hide {
+            opacity: .7;
+            transition: opacity 500ms;
+        }
+
+        .btn-hide:hover {
+            opacity: 1;
+        }
+
+        .btn-hide:focus {
+            opacity: 0;
+        }
+
+
+        .btn-color {
+            transition-property: background-color, color;
+            transition-duration: 500ms;
+        }
+
+        .btn-color:focus {
+            color: #AA1111;
+            background-color: #C0FFEE;
+        }
+
+    </style>
+</head>
+
+<body>
+<button class="btn btn-hide">
+    click me to hide me
+</button>
+
+<button class="btn btn-color">
+    click me to change color
+</button>
+
+</body>
+</html>
