@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>:: Transition :: </title>
+
+    <!--    TRANSITION PROPERTY YO ANIMATE BETWEEN TWO DIFFERENT STATES IN CSS-->
+    <style>
+        div {
+            background-color: red;
+            height: 200px;
+            width: 200px;
+            color: #C0FFEE;
+            font-size: 2rem;
+
+            /*ONE LETS SMOOTH THIS CHANGING FROM ONE STATE TO ANOTHER*/
+            /*transition: Duration;*/
+            /*transition: 1s;*/
+            /*transition: Duration;*/
+
+            /*TWO*/
+            /*transition: property Duration linear ;*/
+            /*transition: color 1s;*/
+            /*transition-duration: 1s;*/
+
+            /*THREE*/
+            /*transition: property Duration linear ;*/
+            /*linear is the default and all what it does that it will*/
+            /*increment itself each second*/
+
+            /*slow in the beginning*/
+            /*transition: all 1s ease-in;*/
+
+            /*slow in the end*/
+
+            /*transition: all 1s ease-out;*/
+
+            /*transition: all 1s ease-in-out;*/
+            /*slow start and end and slow in middle*/
+
+            /*FOUR*/
+            /*Cubic buzior*/
+
+            /*FIVE*/
+
+            /*SPECIFY A DELAY*/
+            /*transition: property Duration linear  delay;*/
+            /*transition: all 1s linear .5s;*/
+
+            /*transition-delay: .5s;*/
+            /*transition-timing-function: linear;*/
+            /*transition-duration: 1s;*/
+            /*transition-property: all;*/
+
+            /*SIX*/
+            transition: color 1s, background-color 3s;
+
+
+        }
+
+        div:hover {
+            background-color: green;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+<div>
+    Div
+</div>
+
+</body>
+</html>
