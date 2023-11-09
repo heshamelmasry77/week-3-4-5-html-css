@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>transition</title>
+    <style>
+        .my-container {
+            background-color: #AA1111;
+            color: white;
+
+            font-size: 3rem;
+            width: 400px;
+            height: 400px;
+            /*property duration linear */
+            /*transition: all 2000ms ease-in;*/
+            /*transition: all 2000ms ease-out;*/
+            transition: color 1s, background-color 2s ease-in-out;
+
+            /*ease in*/
+            /*slow in the beginning*/
+
+            /*ease out*/
+            /*slow in the end*/
+
+            /*transition-property: all;*/
+            /*transition-duration: 1s;*/
+
+        }
+
+        .my-container:hover {
+            background-color: #BADA55;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<div class="my-container">
+    My div is here
+</div>
+</body>
+</html>
