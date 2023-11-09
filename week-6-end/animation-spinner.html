@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bounce Example - Spinner</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(360deg)
+            }
+            to {
+                transform: rotate(0deg)
+            }
+        }
+
+        .rotating-spinner {
+            width: 200px;
+            height: 200px;
+            background-image: url("spinner.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            animation-name: rotate;
+            animation-duration: 900ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="rotating-spinner">
+</div>
+
+
+</body>
+</html>

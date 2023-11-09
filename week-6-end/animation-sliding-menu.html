@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bounce Example - Spinner</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideOut {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .menu {
+            width: 200px;
+            height: 100vh;
+            background-color: #4b3832;
+            position: fixed;
+            left: 0;
+            transform: translateX(-200px);
+            animation-name: slideIn;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+
+        .menu.close {
+            animation-name: slideOut;
+            animation-duration: 500ms;
+            animation-fill-mode: forwards;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="menu">
+</div>
+
+
+</body>
+</html>
